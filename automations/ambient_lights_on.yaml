@@ -1,0 +1,20 @@
+- id: id_ambient_lights_on
+  alias: Ambient Lights on
+  description: Turn on ambient lights at sunset
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: 0
+  action:
+  - service: light.turn_on
+    target:
+      entity_id: '{{ entities }}'
+    data:
+      brightness_pct: 75
+      transition: 60
+  variables:
+    entities:
+    - light.kitchen_lightstrip
+    - light.tv_backlight
+    - light.plant_backlight
+    - light.desk_lightstrip

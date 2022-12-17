@@ -1,0 +1,23 @@
+# Input Booleans
+
+wake_up_lights_mondays:
+  name: "Monday"
+  icon: mdi:calendar-week
+wake_up_lights_tuesdays:
+  name: "Tuesday"
+  icon: mdi:calendar-week
+wake_up_lights_wednesdays:
+  name: "Wednesday"
+  icon: mdi:calendar-week
+wake_up_lights_thursdays:
+  name: "Thursday"
+  icon: mdi:calendar-week
+wake_up_lights_fridays:
+  name: "Friday"
+  icon: mdi:calendar-week
+wake_up_lights_saturdays:
+  name: "Saturday"
+  icon: mdi:calendar-week
+wake_up_lights_sundays:
+  name: "Sunday"
+  icon: mdi:calendar-week

@@ -1,0 +1,16 @@
+- id: id_ambient_lights_off
+  alias: Ambient Lights off
+  description: Turn on ambient lights at preset time
+  trigger:
+  - platform: time
+    at: input_datetime.ambient_lights_off
+  action:
+  - service: light.turn_off
+    target:
+      entity_id: '{{ entities }}'
+  variables:
+    entities:
+    - light.kitchen_lightstrip
+    - light.tv_backlight
+    - light.plant_backlight
+    - light.desk_lightstrip

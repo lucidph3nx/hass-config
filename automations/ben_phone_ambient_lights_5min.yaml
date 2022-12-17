@@ -1,0 +1,30 @@
+# for finding my way to bed late at night after I should already be in bed..
+- id: ben_phone_ambient_lights_5min
+  alias: Ben Phone Ambient Lights 5 Minutes
+  description: Turn on ambient lights for 5 minutes when ben puts his phone on charge
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.pixel_6_is_charging
+    from: 'off'
+    to: 'on'
+  condition:
+  - condition: state
+    entity_id: sun.sun
+    state: below_horizon
+  action:
+  - service: light.turn_on
+    target:
+      entity_id: '{{ entities }}'
+    data:
+      brightness_pct: 25
+      transition: 15x
+  - delay: '{{ 5 * 60 }}'
+  - service: light.turn_off
+    target:
+      entity_id: '{{ entities }}'
+  variables:
+    entities:
+    - light.kitchen_lightstrip
+    - light.tv_backlight
+    - light.plant_backlight
+    - light.desk_lightstrip

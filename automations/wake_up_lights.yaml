@@ -1,0 +1,76 @@
+- id: id_wake_up_lights
+  alias: Wake-Up Lights
+  description: Turn lights on in specific time, on preset days
+  trigger:
+  - platform: time
+    at: input_datetime.wake_up_lights_set_time
+  condition:
+  - condition: or
+    conditions:
+    - condition: and
+      conditions:
+      - condition: template
+        value_template: '{{ now().isoweekday() == 1 }}'
+      - condition: state
+        entity_id: input_boolean.wake_up_lights_mondays
+        state: 'on'
+    - condition: and
+      conditions:
+      - condition: template
+        value_template: '{{ now().isoweekday() == 2 }}'
+      - condition: state
+        entity_id: input_boolean.wake_up_lights_tuesdays
+        state: 'on'
+    - condition: and
+      conditions:
+      - condition: template
+        value_template: '{{ now().isoweekday() == 3 }}'
+      - condition: state
+        entity_id: input_boolean.wake_up_lights_wednesdays
+        state: 'on'
+    - condition: and
+      conditions:
+      - condition: template
+        value_template: '{{ now().isoweekday() == 4 }}'
+      - condition: state
+        entity_id: input_boolean.wake_up_lights_thursdays
+        state: 'on'
+    - condition: and
+      conditions:
+      - condition: template
+        value_template: '{{ now().isoweekday() == 5 }}'
+      - condition: state
+        entity_id: input_boolean.wake_up_lights_fridays
+        state: 'on'
+    - condition: and
+      conditions:
+      - condition: template
+        value_template: '{{ now().isoweekday() == 6 }}'
+      - condition: state
+        entity_id: input_boolean.wake_up_lights_saturdays
+        state: 'on'
+    - condition: and
+      conditions:
+      - condition: template
+        value_template: '{{ now().isoweekday() == 7 }}'
+      - condition: state
+        entity_id: input_boolean.wake_up_lights_sundays
+        state: 'on'
+  action:
+  - service: light.turn_on
+    data:
+      brightness_pct: 100
+      color_temp: 400
+      transition: '{{ transition }}'
+      entity_id: '{{ entities }}'
+  - delay:
+      minutes: '{{ (states(''input_number.wake_up_lights_fade_minutes'') | int) +
+        (states(''input_number.wake_up_lights_minutes'') | int) }}'
+  - service: light.turn_off
+    data:
+      entity_id: '{{ entities }}'
+  variables:
+    entities: light.nightlight
+    transition: '{{ states(''input_number.wake_up_lights_fade_minutes'') | int * 60
+      }}'
+  initial_state: true

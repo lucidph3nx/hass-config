@@ -1,0 +1,10 @@
+- id: hydro_growlight_timer #old id, kept for compatibility with ui
+  alias: Growlight On
+  description: Turn lights on at specific time
+  trigger:
+  - platform: time
+    at: input_datetime.hydro_growlight_start
+  action:
+  - service: switch.turn_on
+    target:
+      entity_id: switch.hydro_growlights

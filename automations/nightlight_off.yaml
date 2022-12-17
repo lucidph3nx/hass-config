@@ -1,0 +1,13 @@
+- id: id_nightlight_off
+  alias: Nightlight off
+  description: Turn off nightlight at preset time
+  trigger:
+  - platform: time
+    at: input_datetime.nightlight_off
+  action:
+  - service: light.turn_off
+    target:
+      entity_id: '{{ entities }}'
+  variables:
+    entities:
+    - light.nightlight

@@ -1,0 +1,16 @@
+- id: id_nightlight_on
+  alias: Nightlight on
+  description: Turn on nightlight at preset time
+  trigger:
+  - platform: time
+    at: input_datetime.nightlight_on
+  action:
+  - service: light.turn_on
+    target:
+      entity_id: '{{ entities }}'
+    data:
+      brightness_pct: 75
+      transition: 60
+  variables:
+    entities:
+    - light.nightlight

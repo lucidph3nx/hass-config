@@ -1,0 +1,10 @@
+- id: hydro_growlight_off
+  alias: Growlight Off
+  description: Turn lights off at specific time
+  trigger:
+  - platform: time
+    at: input_datetime.hydro_growlight_stop
+  action:
+  - service: switch.turn_off
+    target:
+      entity_id: switch.hydro_growlights
