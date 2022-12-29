@@ -59,3 +59,14 @@ hydro_pump_duration_2:
   mode: box
   icon: mdi:timer-outline
   unit_of_measurement: min
+
+# temperature to trigger blinds down protection
+lounge_temperature_protection_value:
+  name: 'Temp to Trigger'
+  min: 15
+  max: 100
+  step: 1
+  initial: 27
+  mode: box
+  icon: mdi:car-brake-temperature
+  unit_of_measurement: °C

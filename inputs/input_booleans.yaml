@@ -21,3 +21,27 @@ wake_up_lights_saturdays:
 wake_up_lights_sundays:
   name: "Sunday"
   icon: mdi:calendar-week
+
+# blinds variables
+blinds_office_automation_enable:
+  name: "Office Blinds Automation"
+  icon: mdi:home-automation
+blinds_lounge_automation_enable:
+  name: "Lounge Blinds Automation"
+  icon: mdi:home-automation
+blinds_office_up_custom_time_enable:
+  name: "Office Blinds Up Use Custom Time"
+  icon: mdi:wrench-clock
+blinds_office_down_custom_time_enable:
+  name: "Office Blinds Down Use Custom Time"
+  icon: mdi:wrench-clock
+lounge_office_up_custom_time_enable:
+  name: "Lounge Blinds Up Use Custom Time"
+  icon: mdi:wrench-clock
+lounge_office_down_custom_time_enable:
+  name: "Lounge Blinds Down Use Custom Time"
+  icon: mdi:wrench-clock
+
+blinds_lounge_temperature_protection_enable:
+  name: "Lounge Temperature Protection"
+  icon: mdi:home-automation

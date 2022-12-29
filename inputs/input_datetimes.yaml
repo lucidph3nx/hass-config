@@ -48,3 +48,31 @@ nightlight_off:
   has_date: false
   has_time: true
   icon: mdi:alarm
+
+# blinds variables
+blinds_office_up_custom_time:
+  name: "Office Blinds Up Custom Time"
+  has_date: false
+  has_time: true
+  icon: mdi:alarm
+blinds_office_down_custom_time:
+  name: "Office Blinds Down Custom Time"
+  has_date: false
+  has_time: true
+  icon: mdi:alarm
+blinds_lounge_up_custom_time:
+  name: "Lounge Blinds Up Custom Time"
+  has_date: false
+  has_time: true
+  icon: mdi:alarm
+blinds_lounge_down_custom_time:
+  name: "Lounge Blinds Down Custom Time"
+  has_date: false
+  has_time: true
+  icon: mdi:alarm
+
+lounge_temp_protection_buffer_time:
+  name: "Down time buffer"
+  has_date: false
+  has_time: true
+  icon: mdi:timer-pause
