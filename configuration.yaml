@@ -42,3 +42,24 @@ sensor:
         + ((states('input_number.wake_up_lights_fade_minutes') | int * 60)
         + states('input_number.wake_up_lights_minutes') | int * 60))|timestamp_custom('%H:%M', false)) }}
 
+
+
+# database to store history
+recorder:
+  # note, this is hard coded in the secret.yaml file, i couldnt figure out how to reference a env var as a substring
+  db_url: !secret postgres_connection_string
+  auto_purge: false
+
+
+# locations (Zones)
+zone:
+  - name: Home
+    latitude: -41.27271120008771
+    longitude: 174.78234880222823
+    radius: 50
+    icon: mdi:home
+  - name: Bens Work
+    latitude: -41.28450641993013
+    longitude: 174.7768270969391
+    radius: 50
+    icon: mdi:map-marker
