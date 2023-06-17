@@ -1,9 +1,9 @@
-- id: id_hallway_motion
-  alias: Hallway Motion Light
+- id: id_hallway_motion_near
+  alias: Hallway Motion Light Near
   description: Turn on lightstrip after sunset on motion detect
   trigger:
   - platform: state
-    entity_id: binary_sensor.hall_sensor_occupancy
+    entity_id: binary_sensor.hall_sensor_near_occupancy
     from: 'off'
     to: 'on'
   condition:
@@ -13,16 +13,22 @@
   action:
   - service: light.turn_on
     target:
-      entity_id: light.hall_lightstrip
+      entity_id: '{{ entities }}'
     data:
       brightness_pct: 75
       transition: 2
   - wait_for_trigger:
       platform: state
-      entity_id: binary_sensor.hall_sensor_occupancy
+      entity_id: binary_sensor.hall_sensor_near_occupancy
       from: 'on'
       to: 'off'
   - delay: '{{ states(''input_number.hallway_motion_timeout'') | int * 60 }}'
   - service: light.turn_off
     target:
-      entity_id: light.hall_lightstrip
+      entity_id: '{{ entities }}'
+  variables:
+    entities:
+    - light.kitchen_lightstrip
+    - light.tv_backlight
+    - light.plant_backlight
+    - light.desk_lightstrip
