@@ -10,6 +10,9 @@
   - condition: state
     entity_id: sun.sun
     state: below_horizon
+  - condition: state
+    entity_id: light.ambient_lights
+    state: 'off'
   action:
   - service: light.turn_on
     target:
