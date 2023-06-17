@@ -2,11 +2,11 @@ info: This file contains the MAC_ID of the sensors already registred for Autodis
 info: You can reinitiate Autodiscover for a single MAC_ID, by removing it from the list, or you can initiate a full renewal of sensors to Autodiscover,
 info: By removing all MAC_IDs below these comments lines
 info: DO NOT REMOVE THESE FOUR INFO LINES.
-mac_id: 30c6f71d743c
-name: Pothos Aureus
-mac_id: 30c6f71d7ebc
-name: Monstera adansonii
-mac_id: 30c6f71d7b08
-name: String of Hearts
 mac_id: 30c6f71d7cf8
 name: Philodendron White Princess
+mac_id: 30c6f71d743c
+name: Pothos Aureus
+mac_id: 30c6f71d7b08
+name: String of Hearts
+mac_id: 30c6f71d7ebc
+name: Monstera adansonii
