@@ -7,9 +7,14 @@
   action:
   - service: switch.turn_off
     target:
+      entity_id: switch.hydro_growlights
+  - service: light.turn_off
+    target:
       entity_id: '{{ entities }}'
+    data:
+      brightness_pct: 75
+      transition: 60
   variables:
     entities:
-    - switch.hydro_growlights
     - light.office_planstand_left
     - light.office_planstand_right
