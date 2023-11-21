@@ -8,13 +8,7 @@
   action:
   - service: light.turn_on
     target:
-      entity_id: '{{ entities }}'
+      entity_id: light.office_plant_stand
     data:
-      brightness_pct: 75
-      transition: 60
-  variables:
-    entities:
-    - light.kitchen_lightstrip
-    - light.tv_backlight
-    - light.plant_backlight
-    - light.desk_lightstrip
+      brightness_pct: 100
+      transition: 5

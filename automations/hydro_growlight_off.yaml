@@ -10,11 +10,7 @@
       entity_id: switch.hydro_growlights
   - service: light.turn_off
     target:
-      entity_id: '{{ entities }}'
+      entity_id: light.office_plant_stand
     data:
       brightness_pct: 100
       transition: 5
-  variables:
-    entities:
-    - light.plantstand_left
-    - light.plantstand_right
