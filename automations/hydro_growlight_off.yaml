@@ -12,9 +12,9 @@
     target:
       entity_id: '{{ entities }}'
     data:
-      brightness_pct: 75
-      transition: 60
+      brightness_pct: 100
+      transition: 5
   variables:
     entities:
-    - light.office_planstand_left
-    - light.office_planstand_right
+    - light.planstand_left
+    - light.planstand_right
