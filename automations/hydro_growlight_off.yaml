@@ -16,5 +16,5 @@
       transition: 5
   variables:
     entities:
-    - light.planstand_left
-    - light.planstand_right
+    - light.plantstand_left
+    - light.plantstand_right
