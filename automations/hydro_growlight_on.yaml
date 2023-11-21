@@ -7,4 +7,9 @@
   action:
   - service: switch.turn_on
     target:
-      entity_id: switch.hydro_growlights
+      entity_id: '{{ entities }}'
+  variables:
+    entities:
+    - switch.hydro_growlights
+    - light.office_planstand_left
+    - light.office_planstand_right
