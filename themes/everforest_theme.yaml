@@ -13,8 +13,8 @@ Everforest Theme:
   bright-white: "#d3c6aa"
   grey: "#56635f"
 
-  background: var(--black)
-  text: var(--white)
+  background: "#2d353b"
+  text: "#d3c6aa"
 
   # Material Colors
   google-red-500: var(--red)
@@ -26,15 +26,15 @@ Everforest Theme:
   paper-orange-400: var(--yellow)
 
   # Header
-  app-header-background-color: var(--black)
-  app-header-text-color: var(--white)
+  app-header-background-color: var(--background)
+  app-header-text-color: var(--text)
 
   # Main Interface Colors
-  primary-color: var(--blue)
+  primary-color: var(--green)
   light-primary-color: var(--primary-color)
 
   primary-background-color: var(--background)
-  secondary-background-color: var(--primary-background-color)
+  secondary-background-color: "#343f44"
 
   divider-color: var(--black)
   accent-color: var(--yellow)
@@ -56,8 +56,8 @@ Everforest Theme:
 
   # Buttons
   paper-item-icon-color: var(--app-header-text-color)
-  paper-item-icon-active-color: "#404D64"
-  mdc-button-outline-color: "#404D64"
+  paper-item-icon-active-color: "#425047"
+  mdc-button-outline-color: "#425047"
 
   # States and Badges
   state-icon-color: var(--primary-color)
@@ -94,9 +94,9 @@ Everforest Theme:
 
   # Switches
   switch-checked-button-color: var(--primary-color)
-  switch-checked-track-color: "#404D64"
-  switch-unchecked-button-color: "#636466"
-  switch-unchecked-track-color: "#636466"
+  switch-checked-track-color: "#425047"
+  switch-unchecked-button-color: "#475258"
+  switch-unchecked-track-color: "#475258"
   # Toggles
   paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
   paper-toggle-button-checked-bar-color: var(--switch-checked-track-color)
@@ -108,7 +108,7 @@ Everforest Theme:
   data-table-background-color: var(--primary-background-color)
 
   # Select
-  mdc-select-fill-color: "#4d515d"
+  mdc-select-fill-color: "#425047"
   mdc-select-ink-color: var(--primary-text-color)
   mdc-select-label-ink-color: var(--secondary-text-color)
   mdc-select-idle-line-color: var(--primary-text-color)
