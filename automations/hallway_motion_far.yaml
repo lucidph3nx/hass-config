@@ -1,6 +1,6 @@
 - id: id_hallway_motion_far
   alias: Hallway Motion Light Far
-  description: Turn on lightstrip after sunset on motion detect
+  description: Turn on ambient lights after sunset on motion detect
   trigger:
   - platform: state
     entity_id: binary_sensor.hall_sensor_far_occupancy
@@ -10,10 +10,13 @@
   - condition: state
     entity_id: sun.sun
     state: below_horizon
+  - condition: state
+    entity_id: light.ambient_lights
+    state: 'off'
   action:
   - service: light.turn_on
     target:
-      entity_id: light.hall_lightstrip
+      entity_id: '{{ entities }}'
     data:
       brightness_pct: 75
       transition: 2
@@ -25,4 +28,11 @@
   - delay: '{{ states(''input_number.hallway_motion_timeout'') | int * 60 }}'
   - service: light.turn_off
     target:
-      entity_id: light.hall_lightstrip
+      entity_id: '{{ entities }}'
+  variables:
+    entities:
+    - light.kitchen_lightstrip
+    - light.tv_backlight
+    - light.plant_backlight
+    - light.desk_lightstrip
+    - light.hall_lightstrip

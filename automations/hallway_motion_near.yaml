@@ -1,6 +1,6 @@
 - id: id_hallway_motion_near
   alias: Hallway Motion Light Near
-  description: Turn on lightstrip after sunset on motion detect
+  description: Turn on ambient lights after sunset on motion detect
   trigger:
   - platform: state
     entity_id: binary_sensor.hall_sensor_near_occupancy
@@ -35,3 +35,4 @@
     - light.tv_backlight
     - light.plant_backlight
     - light.desk_lightstrip
+    - light.hall_lightstrip
