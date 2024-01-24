@@ -7,10 +7,15 @@
   action:
   - service: light.turn_off
     target:
-      entity_id: '{{ entities }}'
+      entity_id: '{{ lights }}'
+  - service: switch.turn_off
+    target:
+      entity_id: '{{ switches }}'
   variables:
     entities:
     - light.kitchen_lightstrip
     - light.tv_backlight
     - light.plant_backlight
     - light.desk_lightstrip
+    switches:
+    - switch.lounge_lamp
