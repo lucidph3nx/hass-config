@@ -7,7 +7,12 @@
   action:
   - service: switch.turn_off
     target:
-      entity_id: switch.hydro_growlights
+      entity_id: '{{ switches }}'
   - service: light.turn_off
     target:
       entity_id: light.office_plant_stand
+  variables:
+    switches:
+    - switch.cactus_growlight
+    - switch.large_growlight
+    - switch.nft_growlight
