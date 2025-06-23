@@ -11,6 +11,9 @@
   - service: switch.turn_off
     target:
       entity_id: '{{ switches }}'
+  - service: input_boolean.turn_off # Set helper to OFF when this automation turns lights off
+    target:
+      entity_id: input_boolean.ambient_lights_active
   variables:
     lights:
     - light.kitchen_lightstrip

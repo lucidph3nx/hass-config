@@ -45,3 +45,8 @@ blinds_lounge_down_custom_time_enable:
 blinds_lounge_temperature_protection_enable:
   name: "Lounge Temperature Protection"
   icon: mdi:home-automation
+
+# State Variables
+ambient_lights_active:
+  name: "Ambient Lights Active"
+  icon: mdi:light-auto-outline
