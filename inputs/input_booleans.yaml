@@ -50,3 +50,6 @@ blinds_lounge_temperature_protection_enable:
 ambient_lights_active:
   name: "Ambient Lights Active"
   icon: mdi:light-auto-outline
+grow_lights_active:
+  name: "Grow Lights Active"
+  icon: mdi:flower

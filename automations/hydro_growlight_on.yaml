@@ -14,6 +14,9 @@
     data:
       brightness_pct: 100
       transition: 5
+  - service: input_boolean.turn_on # Set helper to ON
+    target:
+      entity_id: input_boolean.grow_lights_active
   variables:
     switches:
     - switch.cactus_growlight
