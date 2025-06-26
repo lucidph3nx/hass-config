@@ -1,6 +1,6 @@
 - id: id_ambient_lights_off
   alias: Ambient Lights off
-  description: Turn on ambient lights at preset time
+  description: Turn off ambient lights at preset time
   trigger:
   - platform: time
     at: input_datetime.ambient_lights_off
