@@ -13,6 +13,7 @@
       entity_id: light.office_plant_stand
     data:
       brightness_pct: 100
+      color_temp_kelvin: 6535
       transition: 5
   - service: input_boolean.turn_on # Set helper to ON
     target:
