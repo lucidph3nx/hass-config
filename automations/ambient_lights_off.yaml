@@ -21,4 +21,5 @@
     - light.plant_backlight
     - light.desk_lightstrip
     switches:
-    - switch.lounge_lamp
+    - switch.lounge_big_lamp
+    - switch.lounge_small_lamp
